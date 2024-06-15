@@ -1,0 +1,1 @@
+Student portal system requires admin login and provides a wide platform for studetns to perform various tasks such as access to digital books, comprehensive dictionary for reference, youtube links etc.Hence enables wide access to resources.
