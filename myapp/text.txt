@@ -1,0 +1,38 @@
+# def wiki(request):
+#     if request.method == "POST":
+#         form = DashboardForm(request.POST)
+#         text = request.POST.get('text', '')  # Use get method to avoid KeyError if 'text' is not in POST
+        
+#         try:
+#             search = wikipedia.page(text)
+#             context = {
+#                 'form': form,
+#                 'title': search.title,
+#                 'link': search.url,
+#                 'details': search.summary,
+#             }
+#         except DisambiguationError as e:
+#             options = e.options  # Get the list of suggested pages
+#             context = {
+#                 'form': form,
+#                 'options': options,  # Pass the suggested options to the template
+#                 'error_message': f"Multiple options found for '{text}'. Please choose one.",
+#             }
+#         except wikipedia.exceptions.PageError:
+#             context = {
+#                 'form': form,
+#                 'error_message': f"No Wikipedia page found for '{text}'.",
+#             }
+#         except Exception as e:
+#             context = {
+#                 'form': form,
+#                 'error_message': f"An error occurred: {str(e)}",
+#             }
+        
+#         return render(request, 'myapp/wiki.html', context)
+    
+#     else:
+#         form = DashboardForm()
+#         context = {'form': form}
+        
+#     return render(request, 'myapp/wiki.html', context)
